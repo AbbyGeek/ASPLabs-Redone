@@ -1,0 +1,19 @@
+﻿@model  ASPLabs2.Models.User
+
+@{
+    ViewBag.Title = "EditUser";
+}
+
+<h2>EditUser</h2>
+
+<form action="~/Database/SaveChanges" method="post">
+    
+    Username: <input type="text" name="username" value="@Model.username" placeholder="@Model.username"/><br />
+    Password: <input type="password" name="password" value="@Model.password" placeholder="@Model.password" /><br />
+    Email: <input type="text" name="email" value="@Model.email" placeholder="@Model.email" /><br />
+    <input type="hidden" name="UserID" value="@Model.UserID" /><br />
+
+    <button type="submit">Save</button>   
+
+</form>
+

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>UserID</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+@foreach (var x in ViewBag.Users)
+{
+    <tr>
+        <td>@x.UserID</td>
+        <td>@x.username</td>
+        <td>@x.email</td>
+
+        <td><a href="~/Database/EditUser?ID=@x.UserID" class="btn-primary">Edit</a></td>
+        <td><a href="~/Database/DeleteUser?ID=@x.UserID" class="btn-block">Delete</a></td>
+    </tr>
+}
+</table>
